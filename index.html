@@ -39,27 +39,10 @@
 
     <h2><span id="password"></span></h2> 
     <button onclick="generatePassword()">Generate Password</button>
-    <button onclick="copyPassword()" id="copyBtn" style="display:none;">Copy Password</button>
-    <br>
-    <div class="copy-feedback" id="copyFeedback">Copied to clipboard!</div>
     <br>
     <script src= passwordscript.js> </script>
-    <script>
-        function copyPassword() {
-            const passwordText = document.getElementById('password').innerText;
-            if (passwordText) {
-                navigator.clipboard.writeText(passwordText).then(() => {
-                    const feedback = document.getElementById('copyFeedback');
-                    feedback.style.display = 'block';
-                    setTimeout(() => {
-                        feedback.style.display = 'none';
-                    }, 2000);
-                }).catch(err => {
-                    alert('Failed to copy password');
-                });
-            }
-        }
-    </script>
-    <p> Click the button to generate a secure password. Our generator combines generic words, complex terms, numbers and symbols for maximum security, while still being easy to remember. You can test [...] 
+   <p> Click the button to generate a secure password. Our generator combines generic words, complex terms, numbers and symbols for maximum security, while still being easy to remember. You can test the strength of each generated password <a href="https://www.passwordmonster.com/" target="_blank">here</a>. There are over 19 million possible combinations! </p>
+
+
 </body>
 </html>
